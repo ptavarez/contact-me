@@ -2,7 +2,11 @@
 
 {{#each model as |contact|}}
   <ul>
+    {{#if contact.first_name}}
     <li>{{#link-to 'contact' contact}}{{contact.first_name}}{{/link-to}}</li>
+    {{else}}
+    <li>{{#link-to 'contact' contact}}Noname{{/link-to}}</li>
+    {{/if}}
   </ul>
 {{/each}}
 
