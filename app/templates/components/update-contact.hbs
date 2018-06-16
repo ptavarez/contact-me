@@ -1,0 +1,9 @@
+<h4>Update Contact</h4>
+<form class="col-lg-6 col-md-6 col-sm-4 " {{action 'updateContact' on='submit'}}>
+  {{input placeholder='First Name' value=contact.first_name}}
+  {{input placeholder='Last Name' value=contact.last_name}}
+  {{input placeholder='Job Tile' value=contact.job_title}}
+  {{input placeholder='Phone Number' value=contact.phone_number}}
+  {{input placeholder='Email' value=contact.email}}
+  <button class='btn btn-primary' type='submit'>Update</button>
+</form>
