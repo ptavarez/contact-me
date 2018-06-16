@@ -8,6 +8,10 @@ export default Route.extend({
   actions: {
     updateContact (contact) {
       contact.save()
+    },
+    deleteContact (contact) {
+      contact.destroyRecord()
+        .then(() => this.transitionTo('contacts'))
     }
   }
 })
