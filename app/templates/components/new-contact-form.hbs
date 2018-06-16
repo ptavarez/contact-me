@@ -1,0 +1,15 @@
+
+
+  {{input placeholder='First Name' value=contact.first_name}}
+
+  {{input placeholder='Last Name' value=contact.last_name}}
+
+  {{input placeholder='Job Title' value=contact.job_title}}
+
+  {{input placeholder='Phone Number' value=contact.phone_number}}
+
+  {{input placeholder='Email' value=contact.email}}
+
+  <button class='btn btn-sm btn-primary' type='submit' {{action 'createContact'}}>
+    Create
+  </button>
