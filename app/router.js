@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('landing', { path: '/' })
   this.route('create-contact')
   this.route('contacts')
+  this.route('contact', { path: '/contacts/:contact_id' })
 })
 
 export default Router

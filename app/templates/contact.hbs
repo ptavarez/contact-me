@@ -1,0 +1,21 @@
+<h2>{{model.first_name}} {{model.last_name}}</h2>
+
+<ul>
+  {{#if model.job_title}}
+    <li>Job Title: {{model.job_title}}</li>
+  {{else}}
+    <li>Job Title: Seeking Employment</li>
+  {{/if}}
+  {{#if model.phone_number}}
+    <li>Phone Number: {{model.phone_number}}</li>
+  {{else}}
+    <li>Phone Number: Phone inactive</li>
+  {{/if}}
+  {{#if model.email}}
+    <li>Email: {{model.email}}</li>
+  {{else}}
+    <li>Email: Please send mail via homing pigeon</li>
+  {{/if}}
+</ul>
+
+<p class='text-center'>{{#link-to 'landing'}}Return to Main Page{{/link-to}}</p>
