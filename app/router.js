@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('change-password')
   this.route('landing', { path: '/' })
   this.route('create-contact')
+  this.route('contacts')
 })
 
 export default Router
