@@ -1,0 +1,27 @@
+<h2>{{model.first_name}} {{model.last_name}}</h2>
+
+<ul>
+  {{#if model.job_title}}
+    <li>Job Title: {{model.job_title}}</li>
+  {{else}}
+    <li>Job Title: Seeking Employment</li>
+  {{/if}}
+  {{#if model.phone_number}}
+    <li>Phone Number: {{model.phone_number}}</li>
+  {{else}}
+    <li>Phone Number: Phone inactive</li>
+  {{/if}}
+  {{#if model.email}}
+    <li>Email: {{model.email}}</li>
+  {{else}}
+    <li>Email: Please send mail via homing pigeon</li>
+  {{/if}}
+</ul>
+
+{{update-contact update='updateContact' contact=model}}
+
+{{delete-contact delete='deleteContact' contact=model}}
+
+<p class='col-lg-12 col-md-12 col-sm-12 text-center'>
+  {{#link-to 'contacts'}}Return to Contacts{{/link-to}}
+</p>
