@@ -1,7 +1,9 @@
-<h2>Contacts</h2>
+<h2 class='text-center'>Contacts</h2>
 
 {{#each model as |contact|}}
   <ul>
     <li>{{#link-to 'contact' contact}}{{contact.first_name}}{{/link-to}}</li>
   </ul>
 {{/each}}
+
+<p class='text-center'>{{#link-to 'landing'}}Return to Main Page{{/link-to}}</p>
