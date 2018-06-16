@@ -2,6 +2,6 @@
 
 {{#each model as |contact|}}
   <ul>
-    <li>{{contact.first_name}}</li>
+    <li>{{#link-to 'contact' contact}}{{contact.first_name}}{{/link-to}}</li>
   </ul>
 {{/each}}
