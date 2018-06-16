@@ -7,9 +7,9 @@ export default Route.extend({
 
   actions: {
     createContact (contact) {
-      console.log(contact)
       this.get('store').createRecord('contact', contact)
       .save()
+      .then(() => this.transitionTo('contacts'))
         .then(() => {
           console.log('Contact Created!')
         })
