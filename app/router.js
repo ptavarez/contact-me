@@ -14,6 +14,7 @@ Router.map(function () {
   this.route('create-contact')
   this.route('contacts')
   this.route('contact', { path: '/contacts/:contact_id' })
+  this.route('search', {path: '/contacts/#/:searchQuery'})
 })
 
 export default Router
