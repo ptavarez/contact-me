@@ -1,8 +1,6 @@
-<h2 class='text-center'>Contacts</h2>
+<h3>Search Results</h3>
 
-<form {{action 'search' searchQuery on='submit'}}>
-  {{input placeholder='Search Contacts' value=searchQuery}}
-</form>
+{{#if model}}
 
 {{#each model as |contact|}}
 
@@ -19,6 +17,7 @@
       Noname
     {{/if}}
   {{/link-to}}
+
     <ul>
       {{#if contact.job_title}}
         <li>Job Title: {{contact.job_title}}</li>
@@ -41,4 +40,12 @@
 
 {{/each}}
 
-<p class='text-center'>{{#link-to 'landing'}}Return to Main Page{{/link-to}}</p>
+{{else}}
+
+<p>Your search does not match any contacts</p>
+
+{{/if}}
+
+<p class='col-lg-12 col-md-12 col-sm-12 text-center'>
+  {{#link-to 'contacts'}}Return to Contacts{{/link-to}}
+</p>

@@ -1,22 +1,15 @@
-<h2>{{model.first_name}} {{model.last_name}}</h2>
-
-<ul>
-  {{#if model.job_title}}
-    <li>Job Title: {{model.job_title}}</li>
+<h2>
+  {{#if model.first_name}}
+    {{model.first_name}}
   {{else}}
-    <li>Job Title: Seeking Employment</li>
+    Noname
   {{/if}}
-  {{#if model.phone_number}}
-    <li>Phone Number: {{model.phone_number}}</li>
+  {{#if model.last_name}}
+    {{model.last_name}}
   {{else}}
-    <li>Phone Number: Phone inactive</li>
+    Noname
   {{/if}}
-  {{#if model.email}}
-    <li>Email: {{model.email}}</li>
-  {{else}}
-    <li>Email: Please send mail via homing pigeon</li>
-  {{/if}}
-</ul>
+</h2>
 
 {{update-contact update='updateContact' contact=model}}
 
