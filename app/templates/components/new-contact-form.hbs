@@ -1,13 +1,32 @@
-{{input placeholder='First Name' value=contact.first_name}}
 
-{{input placeholder='Last Name' value=contact.last_name}}
+<div class="col-lg-8 col-md-8 col-sm-8 new-contact-form">
 
-{{input placeholder='Job Title' value=contact.job_title}}
+  <div class="col-lg-6 col-md-6 col-sm-6 new-c">
+    {{input placeholder='First Name' value=contact.first_name}}
+  </div>
 
-{{input placeholder='Phone Number' value=contact.phone_number}}
+  <div class="col-lg-6 col-md-6 col-sm-6 new-c">
+    {{input placeholder='Last Name' value=contact.last_name}}
+  </div>
 
-{{input placeholder='Email' value=contact.email}}
+  <div class="col-lg-6 col-md-6 col-sm-6 new-c">
+    {{input placeholder='Job Title' value=contact.job_title}}
+  </div>
 
-<button class='btn btn-sm btn-primary' type='submit' {{action 'createContact'}}>
-  Create
-</button>
+  <div class="col-lg-6 col-md-6 col-sm-6 new-c">
+    {{input placeholder='Phone Number' value=contact.phone_number}}
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12 new-c">
+    {{input placeholder='Email' value=contact.email}}
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12 new-c-btn">
+    <button class='col-lg-12 col-md-12 col-sm-12 btn btn-sm btn-primary' type='submit' {{action 'createContact'}}>
+      Create
+    </button>
+    <button class='col-lg-12 col-md-12 col-sm-12 btn btn-sm btn-secondary' type='submit' {{action 'reset'}}>
+      Clear Form
+    </button>
+  </div>
+</div>

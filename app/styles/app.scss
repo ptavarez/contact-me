@@ -1,1 +1,153 @@
 @import "ember-bootstrap/bootstrap";
+
+// * ---------------------------------------------------------------------------
+body {
+  background-image: url('https://i.imgur.com/FqaEyV0.jpg');
+  background-color: #4682B4;
+  color: #fff;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+a {
+  color: #bbbbbb;
+}
+
+a:hover {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+// sign-up page ----------------------------------------------------------------
+
+.un {
+  float: left;
+}
+
+.email {
+  margin-left: 16.5%;
+}
+.sign-up-form {
+  margin-left: 25%;
+  margin-top: 10%;
+  font-size: 10px;
+}
+
+.btn {
+  margin-bottom: 15px;
+}
+
+.wel, .come {
+  margin-top: 3%;
+}
+
+.come {
+  font-size: 15px;
+}
+
+// sign-in page ----------------------------------------------------------------
+
+.sign-in {
+ background-color: #fafafa;
+ margin-left: 25%;
+ margin-top: 10%;
+}
+
+.sign-in-form {
+  margin-left: 15%;
+}
+
+.in {
+  color: #888888;
+}
+
+.sign-text {
+  margin-left: 47%;
+}
+
+.sign-in-btn {
+  margin-left: 74%;
+}
+
+// new contact page ------------------------------------------------------------
+
+.new-contact-form {
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.new-c {
+  margin-bottom: 20px;
+}
+
+.new-c-btn {
+  margin-bottom: 40px;
+}
+
+.tact {
+  background-color: #fafafa;
+  color: #888888;
+  margin-top: 5%;
+}
+
+.ret-main {
+  margin-top: 20px;
+}
+
+// account page ----------------------------------------------------------------
+.cp-form {
+  margin-left: 25%;
+}
+
+.change-pw {
+  margin-top: 10%;
+}
+
+.sign-out {
+  margin-left: 45%;
+}
+
+// main / landing --------------------------------------------------------------
+.land {
+  background-color: #888888;
+  border: 5px solid #000;
+  margin-top: 5%;
+}
+
+.landing {
+  margin-top: 5%;
+}
+
+// contact(s) page ---------------------------------------------------------------
+ul {
+  list-style-type: none;
+}
+
+b {
+  color: #dbdbdb;
+}
+
+.contact {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.contact:hover {
+  background-color: #888888;
+}
+
+.update {
+  margin-bottom: 5px;
+}
+
+.update-btn {
+  float: right;
+  margin-top: 5px;
+}
+
+.update-contact-form {
+  margin-left: 30%;
+  margin-top: 10%;
+}
+.delete-btn {
+  margin-left: 60%;
+}

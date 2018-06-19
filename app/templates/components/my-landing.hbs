@@ -1,16 +1,18 @@
 {{#if isAuthenticated}}
-  <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-    {{#link-to 'create-contact'}}<h3>NEW CONTACT</h3>{{/link-to}}
+<div class="landing">
+  <div style="font-size:80px;" class="col-lg-12 col-md-12 col-sm-12 text-center land">
+    {{#link-to 'create-contact'}}<p>New Contact</p>{{/link-to}}
   </div>
-  <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-    {{#link-to 'contacts'}}<h3>VIEW CONTACTS</h3>{{/link-to}}
+
+  <div style="font-size:80px;" class="col-lg-12 col-md-12 col-sm-12 text-center land">
+    {{#link-to 'contacts'}}<p>My Contacts</p>{{/link-to}}
   </div>
-{{else}}
-  <h1 class="text-center"> Welcome to ContactMe</h1>
-  <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-    {{#link-to 'sign-in'}}<h3>SIGN IN</h3>{{/link-to}}
+
+  <div style="font-size:80px;" class="col-lg-12 col-md-12 col-sm-12 text-center land">
+    {{#link-to 'change-password'}}<p>My Account</p>{{/link-to}}
   </div>
-  <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-    {{#link-to 'sign-up'}}<h3>SIGN UP</h3>{{/link-to}}
-  </div>
+</div>
+  {{else}}
+  <p>Hmmm... It appears you're not signed in.</p>
+  <h1>{{#link-to 'sign-in' class="text-center"}}Login!!!{{/link-to}}</h1>
 {{/if}}

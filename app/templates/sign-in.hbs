@@ -1,3 +1,14 @@
-<h2>Sign In</h2>
 
-{{sign-in-form submit="signIn" reset="reset" credentials=model}}
+<div class="col-lg-6 col-md-6 col-sm-6 sign-in">
+
+<h2 class="text-center in">Sign In</h2>
+
+  <div class="col-lg-8 col-md-8 col-sm-8 sign-in-form">
+    {{sign-in-form submit="signIn" reset="reset" credentials=model}}
+  </div>
+
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 sign-text">
+  <h5>Don't have an account? {{#link-to 'sign-up'}}Sign up{{/link-to}}</h5>
+</div>
