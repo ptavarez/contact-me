@@ -80,13 +80,17 @@ a:hover {
 }
 
 .new-c-btn {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .tact {
   background-color: #fafafa;
   color: #888888;
   margin-top: 5%;
+}
+
+.ret-main {
+  margin-top: 20px;
 }
 
 // account page ----------------------------------------------------------------
@@ -100,4 +104,14 @@ a:hover {
 
 .sign-out {
   margin-left: 45%;
+}
+
+// main / landing --------------------------------------------------------------
+.land {
+  border: 5px solid #888888;
+  margin-top: 5%;
+}
+
+.landing {
+  margin-top: 5%;
 }
