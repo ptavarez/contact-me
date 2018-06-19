@@ -11,7 +11,6 @@ export default Route.extend({
 
   actions: {
     search (searchQuery) {
-      console.log(searchQuery)
       this.transitionTo('search', searchQuery)
     }
   }
