@@ -108,7 +108,8 @@ a:hover {
 
 // main / landing --------------------------------------------------------------
 .land {
-  border: 5px solid #888888;
+  background-color: #888888;
+  border: 5px solid #000;
   margin-top: 5%;
 }
 
@@ -126,9 +127,27 @@ b {
 }
 
 .contact {
+  font-size: 20px;
   margin: 10px;
 }
 
 .contact:hover {
   background-color: #888888;
+}
+
+.update {
+  margin-bottom: 5px;
+}
+
+.update-btn {
+  float: right;
+  margin-top: 5px;
+}
+
+.update-contact-form {
+  margin-left: 30%;
+  margin-top: 10%;
+}
+.delete-btn {
+  margin-left: 60%;
 }
