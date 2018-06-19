@@ -4,10 +4,12 @@
   {{input placeholder='Search Contacts' value=searchQuery}}
 </form>
 
+{{#if model}}
+
 {{#each model as |contact|}}
 
-  <div class='col-lg-6 col-md-6 col-sm-6'>
   {{#link-to 'contact' contact}}
+  <div class='col-lg-6 col-md-6 col-sm-6 contact'>
     {{#if contact.first_name}}
       {{contact.first_name}}
     {{else}}
@@ -18,27 +20,37 @@
     {{else}}
       Noname
     {{/if}}
-  {{/link-to}}
     <ul>
       {{#if contact.job_title}}
-        <li>Job Title: {{contact.job_title}}</li>
+        <li>Job Title: <b>{{contact.job_title}}</b></li>
       {{else}}
-        <li>Seeking Employment</li>
+        <li><b>Seeking Employment</b></li>
       {{/if}}
       {{#if contact.phone_number}}
-        <li>Phone Number: {{contact.phone_number}}</li>
+        <li>Phone Number: <b>{{contact.phone_number}}</b></li>
       {{else}}
-        <li>Phone inactive</li>
+        <li><b>Phone inactive</b></li>
       {{/if}}
       {{#if contact.email}}
-        <li>Email: {{contact.email}}</li>
+        <li>Email: <b>{{contact.email}}</b></li>
       {{else}}
-        <li>Phone inactive</li>
+        <li><b>Email inactive</b></li>
       {{/if}}
     </ul>
 
   </div>
+{{/link-to}}
 
 {{/each}}
 
-<p class='text-center'>{{#link-to 'landing'}}Return to Main Page{{/link-to}}</p>
+{{else}}
+<div class="text-center">
+  <h3>Your contacts will appear here!</h3>
+
+  <h2>{{#link-to 'create-contact'}}Create New Contact{{/link-to}}</h2>
+</div>
+
+{{/if}}
+
+
+<p class='col-lg-12 col-md-12 col-sm-12 text-center .ret-main'>{{#link-to 'landing'}}Return to Main Page{{/link-to}}</p>

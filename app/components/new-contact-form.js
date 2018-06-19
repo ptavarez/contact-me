@@ -13,6 +13,10 @@ export default Component.extend({
     createContact () {
       this.sendAction('create', this.get('contact'))
       this.set('contact', {})
+    },
+
+    reset () {
+      this.set('contact', {})
     }
   }
 })
