@@ -1,11 +1,46 @@
-{{email-input email=credentials.email}}
-{{password-input password=credentials.password}}
-{{password-confirmation-input password=credentials.passwordConfirmation}}
+{{#if isAuthenticated}}
+  <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+    {{#link-to 'create-contact'}}<h3>NEW CONTACT</h3>{{/link-to}}
+  </div>
+  <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+    {{#link-to 'contacts'}}<h3>VIEW CONTACTS</h3>{{/link-to}}
+  </div>
+{{else}}
 
-<button type="submit" class="btn btn-primary" {{action "submit"}}>
-  Sign Up
-</button>
+<h2 class="text-center wel">
+  Back up your phone book
+</h2>
 
-<button class="btn btn-default" {{action "reset"}}>
-  Clear Form
-</button>
+<h4 class="text-center come">
+  A contacts management web application. ContactMe stores all of your contacts
+  safely.
+</h4>
+
+
+<div class="sign-up-form">
+  <div class="col-lg-3 col-md-3 col-sm-3 un">
+    {{user-name user_name=credentials.userName}}
+  </div>
+
+  <div class="col-lg-3 col-md-3 col-sm-3 email">
+    {{email-input email=credentials.email}}
+  </div>
+
+  <div class="col-lg-8 col-md-8 col-sm-8 up">
+    {{password-input password=credentials.password}}
+  </div>
+
+  <div class="col-lg-8 col-md-8 col-sm-8">
+    {{password-confirmation-input password=credentials.passwordConfirmation}}
+  </div>
+
+  <button type="submit" class="col-lg-8 col-md-8 col-sm-8 btn btn-primary" {{action "submit"}}>
+    Create Account
+  </button>
+
+  <button class="col-lg-8 col-md-8 col-sm-8 btn btn-default" {{action "reset"}}>
+    Clear Form
+  </button>
+</div>
+
+  {{/if}}

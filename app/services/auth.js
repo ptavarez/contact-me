@@ -11,6 +11,7 @@ export default Service.extend({
     return this.get('ajax').post('/sign-up', {
       data: {
         credentials: {
+          user_name: credentials.userName,
           email: credentials.email,
           password: credentials.password,
           password_confirmation: credentials.passwordConfirmation

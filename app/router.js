@@ -7,10 +7,10 @@ const Router = EmberRouter.extend({
 })
 
 Router.map(function () {
-  this.route('sign-up')
+  this.route('sign-up', { path: '/' })
   this.route('sign-in')
   this.route('change-password')
-  this.route('landing', { path: '/' })
+  this.route('landing', { path: '/home' })
   this.route('create-contact')
   this.route('contacts')
   this.route('contact', { path: '/contacts/:contact_id' })

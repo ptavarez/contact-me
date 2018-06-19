@@ -1,1 +1,33 @@
 @import "ember-bootstrap/bootstrap";
+
+body {
+  background-image: url('https://i.imgur.com/FqaEyV0.jpg');
+  background-color: #4682B4;
+  color: #fff;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+.un {
+  float: left;
+}
+
+.email {
+  margin-left: 16.5%;
+}
+.sign-up-form {
+  margin-left: 25%;
+  margin-top: 10%;
+  font-size: 10px;
+}
+
+.btn {
+  margin-bottom: 15px;
+}
+
+.wel, .come {
+  margin-top: 3%;
+}
+
+.come {
+  font-size: 15px;
+}
