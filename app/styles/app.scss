@@ -1,11 +1,23 @@
 @import "ember-bootstrap/bootstrap";
 
+// * ---------------------------------------------------------------------------
 body {
   background-image: url('https://i.imgur.com/FqaEyV0.jpg');
   background-color: #4682B4;
   color: #fff;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
+
+a {
+  color: #bbbbbb;
+}
+
+a:hover {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+// sign-up page ----------------------------------------------------------------
 
 .un {
   float: left;
@@ -30,4 +42,28 @@ body {
 
 .come {
   font-size: 15px;
+}
+
+// sign-in page ----------------------------------------------------------------
+
+.sign-in {
+ background-color: #fafafa;
+ margin-left: 25%;
+ margin-top: 10%;
+}
+
+.sign-in-form {
+  margin-left: 15%;
+}
+
+.in {
+  color: #888888;
+}
+
+.sign-text {
+  margin-left: 47%;
+}
+
+.sign-in-btn {
+  margin-left: 74%;
 }
