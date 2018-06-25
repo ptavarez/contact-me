@@ -7,9 +7,6 @@ export default Route.extend({
       .then((results) => {
         if (results.get('lastObject') === undefined) {
           results = false
-          console.log('Contact(s) not found')
-        } else {
-          console.log('Contact(s) found!', results)
         }
         return results
       })
