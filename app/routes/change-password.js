@@ -5,6 +5,7 @@ import RSVP from 'rsvp'
 export default Route.extend({
   auth: service(),
   flashMessages: service(),
+  notification: service('toast'),
 
   model () {
     return RSVP.Promise.resolve({})
@@ -17,19 +18,16 @@ export default Route.extend({
         .then(() => this.get('auth').signOut())
         .then(() => this.transitionTo('sign-in'))
         .then(() => {
-          this.get('flashMessages')
-          .success('Successfully changed your password!')
+          this.get('notification').success('Successfully changed your password!')
         })
         .then(() => {
-          this.get('flashMessages').warning('You have been signed out.')
+          this.get('notification').warning('You have been signed out.')
         })
         .catch(() => {
-          this.get('flashMessages')
-          .danger('There was a problem. Please try again.')
+          this.get('notification').error('There was a problem. Please try again.')
         })
       } else {
-        this.get('flashMessages')
-        .danger('Your new passwords must match.')
+        this.get('notification').error('Your new passwords must match.')
       }
     },
 
@@ -38,11 +36,10 @@ export default Route.extend({
         .then(() => this.get('store').unloadAll())
         .then(() => this.transitionTo('application'))
         .then(() => {
-          this.get('flashMessages').warning('You have been signed out.')
+          this.get('notification').warning('You have been signed out.')
         })
         .catch(() => {
-          this.get('flashMessages')
-          .danger('There was a problem. Are you sure you\'re signed-in?')
+          this.get('notification').error('There was a problem. Please try again.')
         })
     }
   }

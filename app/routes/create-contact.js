@@ -1,6 +1,9 @@
 import Route from '@ember/routing/route'
+import { inject as service } from '@ember/service'
 
 export default Route.extend({
+  notification: service('toast'),
+
   model () {
     return this.get('store').findAll('contact')
   },
@@ -11,10 +14,10 @@ export default Route.extend({
       .save()
       .then(() => this.transitionTo('contacts'))
         .then(() => {
-          console.log('Contact Created!')
+          this.get('notification').success('Contact Created')
         })
         .catch(() => {
-          console.log('Contact not created')
+          this.get('notification').error('There was a problem. Please try again.')
         })
     }
   }

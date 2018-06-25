@@ -4,6 +4,7 @@ import { inject as service } from '@ember/service'
 export default Route.extend({
   auth: service(),
   flashMessages: service(),
+  notification: service('toast'),
 
   actions: {
     signOut () {
@@ -27,12 +28,12 @@ export default Route.extend({
       )
 
       if (unauthorized) {
-        this.get('flashMessages')
-          .danger('You must be authenticated to access this page.')
+        this.get('notification')
+          .error('You must be authenticated to access this page.')
         this.transitionTo('/sign-in')
       } else {
-        this.get('flashMessages')
-          .danger('There was a problem. Please try again.')
+        this.get('notification')
+          .error('There was a problem. Please try again.')
       }
 
       return false
