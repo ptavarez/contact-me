@@ -4,39 +4,38 @@
 
 {{#each model as |contact|}}
 
-  <div class='col-lg-6 col-md-6 col-sm-6'>
-  {{#link-to 'contact' contact}}
-    {{#if contact.first_name}}
-      {{contact.first_name}}
+{{#link-to 'contact' contact}}
+<div class='col-lg-6 col-md-6 col-sm-6 contact'>
+  {{#if contact.first_name}}
+    {{contact.first_name}}
+  {{else}}
+    Noname
+  {{/if}}
+  {{#if contact.last_name}}
+    {{contact.last_name}}
+  {{else}}
+    Noname
+  {{/if}}
+  <ul>
+    {{#if contact.job_title}}
+      <li>Job Title: <b>{{contact.job_title}}</b></li>
     {{else}}
-      Noname
+      <li><b>Seeking Employment</b></li>
     {{/if}}
-    {{#if contact.last_name}}
-      {{contact.last_name}}
+    {{#if contact.phone_number}}
+      <li>Phone Number: <b>{{contact.phone_number}}</b></li>
     {{else}}
-      Noname
+      <li><b>Phone inactive</b></li>
     {{/if}}
-  {{/link-to}}
+    {{#if contact.email}}
+      <li>Email: <b>{{contact.email}}</b></li>
+    {{else}}
+      <li><b>Email inactive</b></li>
+    {{/if}}
+  </ul>
 
-    <ul>
-      {{#if contact.job_title}}
-        <li>Job Title: {{contact.job_title}}</li>
-      {{else}}
-        <li>Seeking Employment</li>
-      {{/if}}
-      {{#if contact.phone_number}}
-        <li>Phone Number: {{contact.phone_number}}</li>
-      {{else}}
-        <li>Phone inactive</li>
-      {{/if}}
-      {{#if contact.email}}
-        <li>Email: {{contact.email}}</li>
-      {{else}}
-        <li>Phone inactive</li>
-      {{/if}}
-    </ul>
-
-  </div>
+</div>
+{{/link-to}}
 
 {{/each}}
 
