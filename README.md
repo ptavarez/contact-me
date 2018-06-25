@@ -36,15 +36,15 @@ Surprisingly this time around was much easier than my first ember project. Still
     - Log in
 
 - Application:
-  - Change password
-  - Log out
   - As an authenticated user, I should be able to:
-  - Create a contact
-    - (First Name, Last Name, Job Title, Phone #and email)
-  - Read contact(s)
-  - Update contact(s)
-  - Delete contact(s)
-  - Search for a particular contact
+    - Change password
+    - Log out
+    - Create a contact
+      - (First Name, Last Name, Job Title, Phone #and email)
+    - Read contact(s)
+    - Update contact(s)
+    - Delete contact(s)
+    - Search for a particular contact
 
 ## Technologies Used
 - HTML
