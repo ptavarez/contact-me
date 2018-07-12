@@ -142,7 +142,7 @@ a:hover {
 .sign-out {
   margin-left: 46.5%;
   @include breakpoint(tiny) {
-    margin-top: 85%;
+    margin-top: 50%;
     margin-left: 0%;
   }
 }
@@ -152,6 +152,9 @@ a:hover {
   background-color: #888888;
   border: 5px solid #000;
   margin-top: 5%;
+  @include breakpoint(tiny) {
+    font-size: 60px !important;
+  }
 }
 
 .landing {
@@ -196,6 +199,6 @@ b {
 .delete-btn {
   text-align: center;
   @include breakpoint(tiny) {
-    margin-top: 75%;
+    margin-top: 50%;
   }
 }
