@@ -68,10 +68,17 @@ a:hover {
  background-color: #fafafa;
  margin-left: 25%;
  margin-top: 10%;
+ @include breakpoint(tiny) {
+  margin-left: 0%;
+  margin-top: 20%;
+}
 }
 
 .sign-in-form {
   margin-left: 15%;
+  @include breakpoint(tiny) {
+    margin-left: 0%;
+  }
 }
 
 .in {
@@ -85,6 +92,9 @@ a:hover {
 
 .sign-in-btn {
   margin-left: 74%;
+  @include breakpoint(tiny) {
+    margin-left: 0%;
+  }
 }
 
 // new contact page ------------------------------------------------------------
@@ -92,6 +102,9 @@ a:hover {
 .new-contact-form {
   margin-left: 15%;
   margin-top: 5%;
+  @include breakpoint(tiny) {
+    margin-left: 0%;
+  }
 }
 
 .new-c {
@@ -116,6 +129,10 @@ a:hover {
 // account page ----------------------------------------------------------------
 .cp-form {
   margin-left: 25%;
+  @include breakpoint(tiny) {
+    margin-top: 10%;
+    margin-left: 0%;
+  }
 }
 
 .change-pw {
@@ -124,6 +141,10 @@ a:hover {
 
 .sign-out {
   margin-left: 46.5%;
+  @include breakpoint(tiny) {
+    margin-top: 85%;
+    margin-left: 0%;
+  }
 }
 
 // main / landing --------------------------------------------------------------
@@ -167,7 +188,14 @@ b {
 .update-contact-form {
   margin-left: 25%;
   margin-top: 10%;
+  @include breakpoint(tiny) {
+    margin-left: 0%;
+  }
+  
 }
 .delete-btn {
   text-align: center;
+  @include breakpoint(tiny) {
+    margin-top: 75%;
+  }
 }
