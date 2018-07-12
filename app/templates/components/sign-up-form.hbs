@@ -45,9 +45,11 @@
     Create Account
   </button>
 
-  <button class="col-lg-8 col-md-8 col-sm-8 btn btn-default" {{action "reset"}}>
-    Clear Form
+  {{#link-to 'sign-in'}}
+  <button class="col-lg-8 col-md-8 col-sm-8 btn btn-default">
+    Sign In
   </button>
+  {{/link-to}}
 </div>
 
   {{/if}}
